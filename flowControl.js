@@ -1,6 +1,6 @@
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
-define([ 'use!underscore' ], function(_) {
+define(function() {
   return {
     fizzBuzz : function(num) {
       if (num%15 === 0) {
@@ -19,14 +19,6 @@ define([ 'use!underscore' ], function(_) {
           }
         }
       }
-    },
-
-    or : function(a, b) {
-      return a || b;
-    },
-
-    and : function(a, b) {
-      return a && b;
     }
   };
 });

@@ -1,9 +1,11 @@
-define(function() {
+if (typeof define !== 'function') { var define = require('amdefine')(module); }
+
+define([ 'jquery' ], function($) {
   return {
-    async : function() {
+    async : function(value) {
       return $.Deferred(function(dfd) {
         setTimeout(function() {
-          dfd.resolve(true);
+          dfd.resolve(value);
         }, 500);
       }).promise();
     },
